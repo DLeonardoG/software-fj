@@ -1,0 +1,58 @@
+2026-11-22 05:55:59,391 | INFO | client registered: Ana Maria Rojas (doc 1020304050, ana.rojas@correo.com)
+2026-11-22 05:55:59,391 | INFO | register_client finished for document 1020304050
+2026-11-22 05:55:59,391 | INFO | case 1 ok: Ana Maria Rojas (doc 1020304050, ana.rojas@correo.com)
+2026-11-22 05:55:59,391 | ERROR | case 2 failed: email 'pedro@' is not valid
+2026-11-22 05:55:59,391 | ERROR | case 3 failed: document is required
+2026-11-22 05:55:59,392 | ERROR | client not registered: document 1020304050 is already registered
+2026-11-22 05:55:59,392 | INFO | register_client finished for document 1020304050
+2026-11-22 05:55:59,392 | ERROR | case 4 failed: document 1020304050 is already registered
+2026-11-22 05:55:59,392 | INFO | service added: RoomBooking Sala de juntas A: 80000 COP/hour, available
+2026-11-22 05:55:59,392 | INFO | add_service finished for SALA-01
+2026-11-22 05:55:59,392 | INFO | case 5 ok: RoomBooking Sala de juntas A: 80000 COP/hour, available
+2026-11-22 05:55:59,392 | ERROR | case 6 failed: base rate for Portatil cannot be negative
+2026-11-22 05:55:59,392 | INFO | service added: SpecializedConsulting Asesoria en bases de datos: 120000 COP/hour, available
+2026-11-22 05:55:59,392 | INFO | add_service finished for CON-01
+2026-11-22 05:55:59,392 | INFO | case 7 ok: SpecializedConsulting Asesoria en bases de datos: 120000 COP/hour, available
+2026-11-22 05:55:59,393 | INFO | service added: EquipmentRental Video beam: 20000 COP/hour, available, 2 unit(s)
+2026-11-22 05:55:59,393 | INFO | add_service finished for EQ-02
+2026-11-22 05:55:59,393 | INFO | case 8 ok: EquipmentRental Video beam: 20000 COP/hour, available, 2 unit(s)
+2026-11-22 05:55:59,393 | INFO | service added: RoomBooking Sala de capacitacion: 90000 COP/hour, unavailable
+2026-11-22 05:55:59,393 | INFO | add_service finished for SALA-02
+2026-11-22 05:55:59,393 | INFO | case 9 ok: RoomBooking Sala de capacitacion: 90000 COP/hour, unavailable
+2026-11-22 05:55:59,393 | INFO | reservation created: R-001: Ana Maria Rojas / Sala de juntas A, 2 h, pending, total n/a
+2026-11-22 05:55:59,393 | INFO | create_reservation finished for R-001
+2026-11-22 05:55:59,393 | INFO | reservation R-001 confirmed, total 190400
+2026-11-22 05:55:59,393 | INFO | confirm finished for R-001
+2026-11-22 05:55:59,393 | INFO | case 10 ok: R-001: Ana Maria Rojas / Sala de juntas A, 2 h, confirmed, total 190400 -> confirmed total 190400
+2026-11-22 05:55:59,393 | INFO | reservation created: R-002: Ana Maria Rojas / Sala de capacitacion, 3 h, pending, total n/a
+2026-11-22 05:55:59,393 | INFO | create_reservation finished for R-002
+2026-11-22 05:55:59,394 | ERROR | confirm failed for R-002: Sala de capacitacion is not available
+2026-11-22 05:55:59,394 | INFO | confirm finished for R-002
+2026-11-22 05:55:59,394 | ERROR | case 11 failed: reservation R-002 was not confirmed | cause: Sala de capacitacion is not available
+2026-11-22 05:55:59,394 | INFO | reservation created: R-003: Ana Maria Rojas / Video beam, 2 h, pending, total n/a
+2026-11-22 05:55:59,394 | INFO | create_reservation finished for R-003
+2026-11-22 05:55:59,394 | INFO | reservation R-003 confirmed, total 95200
+2026-11-22 05:55:59,394 | INFO | confirm finished for R-003
+2026-11-22 05:55:59,394 | INFO | reservation R-003 cancelled from confirmed
+2026-11-22 05:55:59,394 | INFO | cancel finished for R-003
+2026-11-22 05:55:59,394 | ERROR | cancel rejected for R-003: reservation R-003 cannot be cancelled from status cancelled
+2026-11-22 05:55:59,394 | INFO | cancel finished for R-003
+2026-11-22 05:55:59,394 | ERROR | case 12 failed: reservation R-003 cannot be cancelled from status cancelled
+2026-11-22 05:55:59,394 | ERROR | case 13 failed: discount must be a fraction between 0 and 1
+2026-11-22 05:55:59,395 | ERROR | reservation R-004 was not created: duration must be greater than zero
+2026-11-22 05:55:59,395 | INFO | create_reservation finished for R-004
+2026-11-22 05:55:59,395 | ERROR | case 14 failed: duration must be greater than zero
+2026-11-22 05:55:59,395 | INFO | reservation created: R-005: Ana Maria Rojas / Asesoria en bases de datos, 3 h, pending, total n/a
+2026-11-22 05:55:59,395 | INFO | create_reservation finished for R-005
+2026-11-22 05:55:59,395 | INFO | reservation R-005 confirmed, total 476000
+2026-11-22 05:55:59,395 | INFO | confirm finished for R-005
+2026-11-22 05:55:59,395 | INFO | reservation R-005 processed, total 476000
+2026-11-22 05:55:59,395 | INFO | process finished for R-005
+2026-11-22 05:55:59,395 | INFO | case 15 ok: R-005: Ana Maria Rojas / Asesoria en bases de datos, 3 h, processed, total 476000 -> processed total 476000
+2026-11-22 05:55:59,395 | INFO | reservation created: R-006: Ana Maria Rojas / Video beam, 4 h, pending, total n/a
+2026-11-22 05:55:59,395 | INFO | create_reservation finished for R-006
+2026-11-22 05:55:59,395 | ERROR | process failed for R-006: only a confirmed reservation can be processed; R-006 is pending
+2026-11-22 05:55:59,395 | INFO | process finished for R-006
+2026-11-22 05:55:59,395 | ERROR | case 16 failed: only a confirmed reservation can be processed; R-006 is pending
+2026-11-22 05:55:59,395 | ERROR | case 17 failed: a consulting session cannot exceed 8 hours
+2026-11-22 05:55:59,395 | INFO | case 18 ok: 142800
